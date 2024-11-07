@@ -4,6 +4,12 @@ class BorrowedBookService {
     this.api = createApiClient(baseUrl);
   }
 
+  async getAll() {
+    return (await this.api.get("/")).data;
+  }
+  async getBorrowsOfReader(id) {
+    return (await this.api.get(`/${id}`)).data;
+  }
   async create(data) {
     return (await this.api.post("/", data)).data;
   }
@@ -15,7 +21,15 @@ class BorrowedBookService {
   }
 
   async getByState(state) {
-    return (await this.api.get(`/${state}`)).data;
+    return (await this.api.get(`/state/${state}`)).data;
+  }
+
+  async getOverDueBorrows() {
+    return (await this.api.get(`/borrows/overdue`)).data;
+  }
+
+  async getOutOfStockBooks() {
+    return (await this.api.get(`/borrows/out-of-stock-books`)).data;
   }
 }
 export default new BorrowedBookService();

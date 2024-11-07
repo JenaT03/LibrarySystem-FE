@@ -3,9 +3,9 @@
     <div class="container-fluid featurs mt-4">
         <div class="container py-2">
             <div class="row d-flex justify-content-around mb-4">
-                <a href="#" class="btn btn-primary col-6 py-4 mb-3">
+                <router-link :to="{ name: 'booklistborrow.admin' }" href="#" class="btn btn-primary col-6 py-4 mb-3">
                     <p class="text-white ms-4 mb-0 text-center" style="font-size: 1.25rem;">Mượn sách</p>
-                </a>
+                </router-link>
             </div>
 
             <div class="row d-flex justify-content-around mb-4">

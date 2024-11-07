@@ -27,5 +27,9 @@ class ReaderService {
   async getAll() {
     return (await this.api.get("/")).data;
   }
+
+  async getByPhone(phone) {
+    return (await this.api.get(`/phone/${phone}`)).data;
+  }
 }
 export default new ReaderService();

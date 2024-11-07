@@ -19,7 +19,13 @@
                         }" class="text-primary text-decoration-underline"><span>Xem chi
                                 tiết</span></router-link>
                         <div class="text-center mt-3 ">
-                            <router-link :to="{
+                            <button v-if="isOutOfStock(book._id)"
+                                class="btn border border-secondary rounded-pill px-3 text-primary "
+                                style="height: fit-content" disabled>
+                                <i class="fa-solid fa-bookmark icon-detail"></i>
+                                <span class="text-detail">Hết sách</span></button>
+
+                            <router-link v-else :to="{
                                 name: 'borrowbook',
                                 params: { id: book._id },
                             }" class="btn border border-secondary rounded-pill px-3 text-primary "
@@ -43,14 +49,32 @@
 
 <script>
 import BookService from '@/services/book.service';
+import borrowedbookService from '@/services/borrowedbook.service';
 
 export default {
     data() {
         return {
             latestBooks: [],
+            outOfStockBooks: []
         };
     },
+    methods: {
+        async getOutOfStockBooks() {
+            try {
+                const response = await borrowedbookService.getOutOfStockBooks();
+                this.outOfStockBooks = response.map((book) => book._id);
+            } catch (error) {
+                console.log(error);
+            }
+        },
+        isOutOfStock(bookId) {
+            return this.outOfStockBooks.includes(bookId);
+        },
+    },
+
     async mounted() {
+        await this.getOutOfStockBooks();
+
         try {
             const response = await BookService.getLatestBook();
             this.latestBooks = response.map((book) => ({

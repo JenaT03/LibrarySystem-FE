@@ -21,8 +21,15 @@
                                 <p class="text-dark fw-bold mb-0 mb-2 font-size-p">
                                     <span style="color: red">{{ book.price }}đ</span>
                                 </p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-5 mt-3 text-primary ">
-                                    <span class="text-primary">Mượn sách</span></a>
+                                <button v-if="isOutOfStock(book._id)"
+                                    class="btn border border-secondary rounded-pill px-5 mt-3 text-primary " disabled>
+                                    <span class="text-primary">Hết sách</span></button>
+
+                                <router-link v-else :to="{
+                                    name: 'borrowbook',
+                                    params: { id: book._id },
+                                }" class="btn border border-secondary rounded-pill px-5 mt-3 text-primary ">
+                                    <span class="text-primary">Mượn sách</span></router-link>
                             </div>
 
 
@@ -42,6 +49,7 @@
 import NavBar from '@/components/layouts/NavBar.vue';
 import Footer from '@/components/layouts/Footer.vue';
 import BookService from '@/services/book.service';
+import borrowedbookService from '@/services/borrowedbook.service';
 export default {
     components: {
         NavBar,
@@ -51,14 +59,10 @@ export default {
     data() {
         return {
             book: null,
-
+            outOfStockBooks: []
         };
     },
 
-    async created() {
-
-        await this.getBook(this.$route.params.id);
-    },
     methods: {
         async getBook(id) {
             try {
@@ -67,7 +71,6 @@ export default {
                     ...response,
                     imgUrl: `/uploads/images/${response.img}`,
                 };
-                console.log(this.book);
             } catch (error) {
                 console.log(error);
                 // Chuyển sang trang NotFound đồng thời giữ cho URL không đổi
@@ -81,7 +84,24 @@ export default {
                 });
             }
         },
-    }
+
+        async getOutOfStockBooks() {
+            try {
+                const response = await borrowedbookService.getOutOfStockBooks();
+                this.outOfStockBooks = response.map((book) => book._id);
+            } catch (error) {
+                console.log(error);
+            }
+        },
+        isOutOfStock(bookId) {
+            return this.outOfStockBooks.includes(bookId);
+        },
+    },
+
+    async mounted() {
+        await this.getOutOfStockBooks();
+        await this.getBook(this.$route.params.id);
+    },
 
 }
 </script>

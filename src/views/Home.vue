@@ -60,6 +60,22 @@
         </div>
     </div>
     <!-- Featurs Section End -->
+
+    <!-- Borrowed Book History -->
+    <div v-if="reader" class="container-fluid featurs">
+        <div class="container py-5">
+            <router-link :to="{ name: 'borrowhistory', params: { id: this.reader._id } }" v-if="reader"
+                class="btn d-flex btn-primary col-12 col-lg-6 offset-lg-3 py-4 justify-content-center">
+                <i class="fa-solid fa-scroll text-white" style="font-size: 2rem"></i>
+                <p class="text-white ms-4 mb-0" style="font-size: 1.5rem">
+                    LỊCH SỬ MƯỢN SÁCH CỦA BẠN
+                </p>
+            </router-link>
+        </div>
+    </div>
+    <!-- End Borrowed Book History -->
+
+
     <!-- Latest Book -->
     <LatestBook />
     <!-- Latest Book End -->
@@ -265,11 +281,17 @@ export default {
         LatestBook,
     },
 
-
+    data() {
+        return { reader: null, };
+    },
     created() {
         const staff = JSON.parse(localStorage.getItem('staff'));
+        const reader = JSON.parse(localStorage.getItem('reader'));
         if (staff) {
             this.$router.push({ name: 'dashboard' });
+        }
+        if (reader) {
+            this.reader = reader;
         }
     }
 
