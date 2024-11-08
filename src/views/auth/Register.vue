@@ -37,7 +37,7 @@ export default {
             try {
                 await authService.register(data);
                 alert('Đăng ký tài khoản thành công');
-                this.$router.push({ name: "readerLogin" })
+                this.$router.push({ name: "readerlogin" })
             } catch (error) {
 
                 console.log(error);

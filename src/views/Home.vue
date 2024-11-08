@@ -153,116 +153,13 @@
         <div class="container py-5">
             <div class="testimonial-header text-center">
                 <h4 class="text-primary"><i class="fa-solid fa-quote-left"></i></h4>
-                <h1 class="display-5 mb-5 text-dark">
+                <h2 class="display-5 mb-5 text-dark">
                     Trích dẫn hay
-                </h1>
+                </h2>
+                <h3>“Không có trò giải trí nào rẻ bằng đọc sách, cũng không có niềm vui nào kéo dài lâu đến thế.”</h3>
+                <h6 class="text-primary text-end">------- Mary Wortley Montagu</h6>
             </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Sách của một kẻ hành khất còn giá trị hơn là dòng máu của kẻ quý tộc.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Shakespeare</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Sách của một kẻ hành khất còn giá trị hơn là dòng máu của kẻ quý tộc.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Shakespeare</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Sách của một kẻ hành khất còn giá trị hơn là dòng máu của kẻ quý tộc.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Shakespeare</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Sách là nguồn của cải quý báu của thế giới và là di sản xứng đáng của các thế hệ và các
-                                quốc gia.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Henry David Thoreau</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Một tác phẩm kinh điển là một cuốn sách không bao giờ nói hết những gì cần phải nói.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Italo Calvino</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                    <div class="position-relative">
-                        <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
-                            style="bottom: 30px; right: 0"></i>
-                        <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">
-                                Sách phá vỡ xiềng xích của thời gian và là minh chứng rõ ràng cho việc con người có thể
-                                tạo ra điều kỳ diệu.
-                            </p>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap">
-                            <div class="ms-4 d-block">
-                                <p class="m-0 pb-3">Carl Sagan</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
     <!-- Tastimonial End -->

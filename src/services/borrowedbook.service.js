@@ -31,5 +31,9 @@ class BorrowedBookService {
   async getOutOfStockBooks() {
     return (await this.api.get(`/borrows/out-of-stock-books`)).data;
   }
+
+  async renewBorrow(id) {
+    return (await this.api.put(`/renew/${id}`)).data;
+  }
 }
 export default new BorrowedBookService();

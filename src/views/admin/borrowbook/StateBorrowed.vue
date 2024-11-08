@@ -46,6 +46,10 @@
                             <i class="fa-solid fa-thumbs-up"></i>
                             Trả sách</button>
 
+                        <button class="btn btn-secondary text-white" @click="renewBorrow(activeBorrow._id)">
+                            <i class="fa-solid fa-rotate"></i>
+                            Gia hạn</button>
+
                     </div>
 
 
@@ -118,6 +122,16 @@ export default {
                 const data = { staffId: this.staff._id, state: "returned" }
                 await borrowedborrowService.update(id, data);
                 alert("Đã trả sách thành công");
+                this.refreshList();
+            } catch (error) {
+                console.log(error);
+            }
+        },
+
+        async renewBorrow(id) {
+            try {
+                await borrowedborrowService.renewBorrow(id);
+                alert('Gia hạn thành công')
                 this.refreshList();
             } catch (error) {
                 console.log(error);

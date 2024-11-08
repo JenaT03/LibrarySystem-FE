@@ -38,7 +38,14 @@ export default {
 
                 if (readerData && readerData[0]?._id) {
                     localStorage.setItem('reader', JSON.stringify(readerData[0]));
-                    this.$router.push({ name: 'home' });
+                    const reader = JSON.parse(localStorage.getItem('reader'));
+                    if (reader.state === "blocked") {
+                        localStorage.removeItem('reader');
+                        this.readerName = null;
+                        this.message = "Tài khoản của bạn đã bị khóa, vui lòng liên hệ với thư viện để biết thêm chi tiết";
+                    } else {
+                        this.$router.push({ name: 'home' });
+                    }
                 } else {
                     this.message = "Mật khẩu hoặc số điện thoại không đúng";
                 }
