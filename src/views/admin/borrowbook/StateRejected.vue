@@ -117,7 +117,7 @@ export default {
 
         async retrieveBorrows() {
             try {
-                this.borrows = await borrowedborrowService.getByState('rejected');
+                this.borrows = await borrowedborrowService.getRejectedBorrows();
             } catch (error) {
                 console.log(error);
             }

@@ -15,6 +15,7 @@ import bookService from "@/services/book.service";
 import AdminNavBar from "@/components/layouts/AdminNavBar.vue";
 import borrowedbookService from "@/services/borrowedbook.service";
 import AdminBorrowNav from "@/components/layouts/AdminBorrowNav.vue";
+import readerService from "@/services/reader.service";
 export default {
     components: {
         BorrowForm,
@@ -51,10 +52,15 @@ export default {
         },
         async createBorrowBook(data) {
             try {
+                const reader = await readerService.get(data.readerId);
+                if (reader.state == 'blocked') {
+                    alert('Tài khoản của độc giả đã bị khóa!');
+                } else {
+                    await borrowedbookService.create(data);
+                    alert('Mượn sách thành công');
+                    this.$router.push({ name: "pendingBorrows" })
+                }
 
-                await borrowedbookService.create(data);
-                alert('Mượn sách thành công');
-                this.$router.push({ name: "booklistborrow.admin" })
             } catch (error) {
                 console.log(error);
             }

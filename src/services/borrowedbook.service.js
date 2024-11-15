@@ -28,6 +28,10 @@ class BorrowedBookService {
     return (await this.api.get(`/borrows/overdue`)).data;
   }
 
+  async getRejectedBorrows() {
+    return (await this.api.get(`/borrows/rejected`)).data;
+  }
+
   async getOutOfStockBooks() {
     return (await this.api.get(`/borrows/out-of-stock-books`)).data;
   }
