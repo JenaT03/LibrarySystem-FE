@@ -37,11 +37,14 @@ export default {
 
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto justify-content-around">
-                        <router-link :to="{ name: 'home' }" class="nav-item nav-link active"><i
+                        <router-link :to="{ name: 'home' }" class="nav-item nav-link" active-class="active"><i
                                 class="fa-solid fa-house"></i></router-link>
-                        <router-link :to="{ name: 'allbook' }" class="nav-item nav-link ms-5">Tất cả sách</router-link>
-                        <router-link :to="{ name: 'introduce' }" class="nav-item nav-link ms-5">Giới thiệu</router-link>
-                        <router-link :to="{ name: 'contact' }" class="nav-item nav-link ms-5">Liên hệ</router-link>
+                        <router-link :to="{ name: 'allbook' }" class="nav-item nav-link ms-5" active-class="active">Tất
+                            cả sách</router-link>
+                        <router-link :to="{ name: 'introduce' }" class="nav-item nav-link ms-5"
+                            active-class="active">Giới thiệu</router-link>
+                        <router-link :to="{ name: 'contact' }" class="nav-item nav-link ms-5" active-class="active">Liên
+                            hệ</router-link>
                     </div>
 
                     <!-- Nếu reader đã đăng nhập, hiển thị tên và tùy chọn đăng xuất -->
