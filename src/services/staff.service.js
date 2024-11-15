@@ -13,6 +13,9 @@ class StaffService {
   async get(id) {
     return (await this.api.get(`/${id}`)).data;
   }
+  async getEmail(email) {
+    return (await this.api.get(`/email/${email}`)).data;
+  }
   async update(id, data) {
     return (await this.api.put(`/${id}`, data)).data;
   }

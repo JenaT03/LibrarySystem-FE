@@ -44,7 +44,7 @@
                     </h4>
                     <BookCard :book="activeBook" />
                     <div v-if="isOutOfStock(activeBook._id)">
-                        <span class="mt-2 text-danger">Sách đã hết hàng</span>
+                        <span class="mt-2 text-danger">Sách đã được mượn hết</span>
                     </div>
                     <router-link v-else :to="{
                         name: 'borrowbook.admin',

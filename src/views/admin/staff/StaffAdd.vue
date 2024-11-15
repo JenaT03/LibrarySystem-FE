@@ -2,8 +2,8 @@
     <AdminNavBar />
     <div class="container">
         <h4 class="text-center m-3">Thêm Nhân viên</h4>
-        <StaffForm :staff="staff" @submit:staff="createStaff" />
-        <p>{{ message }}</p>
+        <p class="text-danger text-center">{{ message }}</p>
+        <StaffForm :staff="staff" @submit:staff="findExistStaff" />
     </div>
 </template>
 <script>
@@ -24,6 +24,19 @@ export default {
     },
 
     methods: {
+        async findExistStaff(data) {
+            try {
+                const user = await staffService.getEmail(data.email);
+                if (user.length == 0) {
+                    this.createStaff(data)
+                } else {
+                    this.message = "Email đã tồn tại"
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        },
+
         async createStaff(data) {
             try {
                 await staffService.create(data);

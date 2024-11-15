@@ -7,8 +7,8 @@
 
     <div class=" container">
         <h3 class="text-center my-5">Đăng ký</h3>
-        <ReaderForm :reader="reader" @submit:reader="createReader" />
-        <p v-if="message" class="text-danger">{{ message }}</p>
+        <p v-if="message" class="text-danger text-center">{{ message }}</p>
+        <ReaderForm :reader="reader" @submit:reader="register" />
 
     </div>
 
@@ -20,6 +20,7 @@ import NavBar from '@/components/layouts/NavBar.vue';
 import Footer from '@/components/layouts/Footer.vue';
 import ReaderForm from '@/components/ReaderForm.vue';
 import authService from '@/services/auth.service';
+import readerService from '@/services/reader.service';
 export default {
     components: {
         NavBar,
@@ -33,6 +34,20 @@ export default {
         };
     },
     methods: {
+        async register(data) {
+            try {
+                const user = await readerService.getByPhone(data.phone);
+                console.log(user);
+                if (user.length == 0) {
+                    this.createReader(data)
+                } else {
+                    this.message = "Số điện thoại đã tồn tại"
+                }
+            }
+            catch (error) { console.log(error) };
+
+        },
+
         async createReader(data) {
             try {
                 await authService.register(data);
