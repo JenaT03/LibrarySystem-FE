@@ -30,7 +30,7 @@ export default {
                 if (user.length == 0) {
                     this.createStaff(data)
                 } else {
-                    this.message = "Email đã tồn tại"
+                    alert('Email đã tồn tại');
                 }
             } catch (error) {
                 console.log(error);

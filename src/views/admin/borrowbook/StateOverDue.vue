@@ -1,17 +1,6 @@
 <template>
     <AdminNavBar />
-    <div class="row g-0 pt-3 bg-white">
-        <router-link :to="{ name: 'booklistborrow.admin' }" class="col-2 text-center py-2 ">MƯỢN SÁCH</router-link>
-        <router-link :to="{ name: 'pendingBorrows' }" class="col-2 text-center py-2">ĐANG CHỜ
-            DUYỆT</router-link>
-        <router-link :to="{ name: 'borrowedBorrows' }" class="col-2 text-center py-2">ĐANG
-            MƯỢN</router-link>
-        <router-link :to="{ name: 'returnedBorrows' }" class="col-2 text-center py-2">ĐÃ TRẢ</router-link>
-        <router-link :to="{ name: 'overdueBorrows' }" class="col-2 text-center py-2  border-cus fw-bold">QUÁ
-            HẠN</router-link>
-        <router-link :to="{ name: 'rejectedBorrows' }" class="col-2 text-center py-2">TỪ CHỐI</router-link>
-
-    </div>
+    <AdminBorrowNav />
 
 
     <div class="container pb-5">
@@ -64,12 +53,14 @@ import BorrowCard from '@/components/client/BorrowCard.vue';
 import BorrowList from '@/components/client/BorrowList.vue';
 import InputSearch from '@/components/layouts/InputSearch.vue';
 import AdminNavBar from "@/components/layouts/AdminNavBar.vue";
+import AdminBorrowNav from '@/components/layouts/AdminBorrowNav.vue';
 export default {
     components: {
         BorrowCard,
         BorrowList,
         InputSearch,
         AdminNavBar,
+        AdminBorrowNav,
     },
 
     data() {
