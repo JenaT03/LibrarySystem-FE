@@ -126,7 +126,8 @@ export default {
 
         async lockAcc(id) {
             try {
-                await ReaderService.changeState(id, 'blocked');
+                const data = { state: 'blocked' }
+                await ReaderService.changeState(id, data);
                 alert('Đã khóa tài khoản độc giả');
                 this.refreshList();
             } catch (error) {
@@ -135,7 +136,8 @@ export default {
         },
         async unlockAcc(id) {
             try {
-                await ReaderService.changeState(id, 'active');
+                const data = { state: 'active' }
+                await ReaderService.changeState(id, data);
                 alert('Đã kích hoạt tài khoản độc giả');
                 this.refreshList();
             } catch (error) {

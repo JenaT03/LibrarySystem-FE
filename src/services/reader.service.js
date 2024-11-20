@@ -20,8 +20,8 @@ class ReaderService {
   async delete(id) {
     return (await this.api.delete(`/${id}`)).data;
   }
-  async changeState(id, state) {
-    return await this.api.get(`/${id}/${state}`).data;
+  async changeState(id, data) {
+    return (await this.api.put(`/${id}/change-state`, data)).data;
   }
 
   async getAll() {
