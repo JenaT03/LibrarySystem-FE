@@ -36,7 +36,7 @@ export default {
     },
     data() {
         const staffFormSchema = yup.object().shape({
-            email: yup.string().required("Email thoại không được để trống"),
+            email: yup.string().required("Email không được để trống"),
             password: yup.string().required("Mật khẩu không được để trống"),
         });
         return {
