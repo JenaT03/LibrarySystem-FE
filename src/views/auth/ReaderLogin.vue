@@ -61,9 +61,6 @@ export default {
         }
     }
 
-    // logout() {
-    //   localStorage.removeItem('reader'); // Xóa đối tượng `reader` khỏi localStorage
-    //   this.$router.push({ name: 'readerLogin' }); // Chuyển hướng về trang đăng nhập
-    // }
+
 }
 </script>

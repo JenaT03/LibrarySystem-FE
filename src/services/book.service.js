@@ -11,7 +11,7 @@ class BookService {
     return (
       await this.api.post("/", data, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "multipart/form-data", //  gửi tệp tin cùng với các dữ liệu khác qua HTTP.
         },
       })
     ).data;

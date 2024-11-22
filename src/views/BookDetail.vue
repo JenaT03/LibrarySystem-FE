@@ -69,7 +69,7 @@ export default {
                 const response = await BookService.get(id);
                 this.book = {
                     ...response,
-                    imgUrl: `/uploads/images/${response.img}`,
+                    imgUrl: `/uploads/images/${response.img}`, // tạo URL tĩnh, khi được gọi trong tempalte thì trình duyệt tự động gửi yêu cầu HTTP đến server để tải tài nguyên từ URL đó.
                 };
             } catch (error) {
                 console.log(error);

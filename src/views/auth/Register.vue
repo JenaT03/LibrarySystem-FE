@@ -37,7 +37,6 @@ export default {
         async register(data) {
             try {
                 const user = await readerService.getByPhone(data.phone);
-                console.log(user);
                 if (user.length == 0) {
                     this.createReader(data)
                 } else {

@@ -11,27 +11,27 @@
                             <div class="carousel-item active rounded">
                                 <img src="@/assets/images/banner1.jpg" class="img-fluid w-100 h-50 bg-secondary rounded"
                                     alt="First slide" />
-                                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a> -->
+
                             </div>
                             <div class="carousel-item rounded">
                                 <img src="@/assets/images/banner2.jpg" class="img-fluid w-100 h-50 rounded"
                                     alt="Second slide" />
-                                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+
                             </div>
                             <div class="carousel-item rounded">
                                 <img src="@/assets/images/banner3.jpg" class="img-fluid w-100 h-50 rounded"
                                     alt="Third slide" />
-                                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+
                             </div>
                             <div class="carousel-item rounded">
                                 <img src="@/assets/images/banner4.jpg" class="img-fluid w-100 h-50 rounded"
                                     alt="Third slide" />
-                                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+
                             </div>
                             <div class="carousel-item rounded">
                                 <img src="@/assets/images/banner5.jpg" class="img-fluid w-100 h-50 rounded"
                                     alt="Third slide" />
-                                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"

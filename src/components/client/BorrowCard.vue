@@ -20,17 +20,17 @@ export default {
             {{ borrow.bookDetails.category }}
         </div>
         <div v-if="borrow.readerDetails" class="p-1">
-            <strong v-if="borrow.readerDetails">Tên người mượn:</strong>
+            <strong>Tên người mượn:</strong>
             {{ borrow.readerDetails.name }}
         </div>
 
         <div v-if="borrow.readerDetails" class="p-1">
-            <strong v-if="borrow.readerDetails">Số điện thoại người mượn:</strong>
+            <strong>Số điện thoại người mượn:</strong>
             {{ borrow.readerDetails.phone }}
         </div>
 
         <div v-if="borrow.staffDetails" class="p-1">
-            <strong v-if="borrow.staffDetails">Nhân viên xét duyệt:</strong>
+            <strong>Nhân viên xét duyệt:</strong>
             {{ `${borrow.staffDetails.name} - ${borrow.staffDetails.phone}` }}
         </div>
 

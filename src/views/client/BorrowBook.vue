@@ -2,7 +2,7 @@
     <NavBar />
     <div v-if="book && reader" class="container-fluid page-header-login-register"
         style=" padding: 8rem 0 4rem 0; margin-top: 100px;">
-        <h1 v-if="book && reader" class="text-center text-white display-5">Mượn sách</h1>
+        <h1 class="text-center text-white display-5">Mượn sách</h1>
     </div>
     <h2 v-if="book && reader" class="my-3 text-center">Mượn sách</h2>
     <div class="container">

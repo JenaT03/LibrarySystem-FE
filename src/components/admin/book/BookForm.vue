@@ -57,7 +57,7 @@
             <span v-if="isHasImg" class="text-warning">Hãy chọn ảnh bìa</span>
 
             <div v-if="bookLocal.img && typeof bookLocal.img === 'string'" class="mt-3">
-                <img :src="bookLocal.imgUrl" alt="Current book cover" style="width: 100px; height: auto;">
+                <img :src="bookLocal.imgUrl" alt="Hình ảnh" style="width: 100px; height: auto;">
             </div>
 
         </div>
