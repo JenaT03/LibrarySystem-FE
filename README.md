@@ -1,29 +1,29 @@
-# library-frontend
+<h1>Library Management System (Frontend)📚 </h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h3>Introduction </h3>
+<p>This project is the frontend of the Library Management System, built using Vue.js. It provides an intuitive and responsive user interface for managing books, users, staff, and borrowing activities. The frontend communicates with the backend via RESTful APIs to ensure a seamless user experience. </p>
 
-## Recommended IDE Setup
+<hr> 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+<h3>Technologies Used </h3>
 
-## Customize configuration
+<ul> 
+  <li>Framework: Vue.js </li>
+  <li>State Management: Vuex  </li>
+  <li>Routing: Vue Router </li>
+  <li>API Communication: Axios </li>
+  <li>Build Tool: Vite </li>
+</ul>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<hr>
 
-## Project Setup
+<h3>Features </h3>
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+<ul> 
+  <li>User Authentication </li>
+  <li>Book Management </li>
+  <li>Publisher Management </li>
+  <li>Staff Management </li>
+  <li>Reader Management </li>
+  <li>Borrowing Management </li>
+</ul>
